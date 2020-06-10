@@ -557,9 +557,38 @@
     <!-- Modal -->
     <div class="backdrop is-hidden" data-backdrop>
       <div class="modal">
-        <div class="modal-button">
-          <button class="button" data-close-modal>Отправить</button>
-        </div>
+        <form class="js-speaker-form">
+          <b>Оставьте свои данные, мы вам перезвоним</b>
+          <br />
+          <label for="name">Имя</label>
+
+          <input type="text" name="name" id="name" />
+          <br />
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
+          <br />
+          <label for="email">Почта</label>
+
+          <input type="email" name="email" id="email" />
+          <br />
+          <label for="comment">Комментарий</label>
+          <textarea class="comment" name="comment" id="comment" rows="10">
+          </textarea>
+          <br />
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <b>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </b>
+          <div class="modal-button">
+            <button class="close-button" data-close-modal>
+              <svg class="close-icon">
+                <use href="./images/sprite.svg#icon-close-button"></use>
+              </svg>
+            </button>
+            <button type="submit" class="button">Отправить</button>
+          </div>
+        </form>
       </div>
     </div>
 
