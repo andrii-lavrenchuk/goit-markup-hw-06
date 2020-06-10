@@ -66,7 +66,8 @@
       <!--"эффективные решения" section-->
       <section class="hero">
         <h1 class="hero-title">эффективные решения<br />для вашего бизнеса</h1>
-        <a href="" class="button">Заказать услугу</a>
+        <button class="button" data-open-modal>Заказать услугу</button>
+        <!-- <a href="" class="button" data-open-modal>Заказать услугу</a> -->
       </section>
       <!--Features section-->
       <section class="section features">
@@ -524,18 +525,78 @@
           </ul>
         </div>
         <div class="subscribe">
-          <b class="call">Подпишитесь на рассылку</b>
-          <!-- <button type="button" class="footer-button">Подписаться</button> -->
-          <a href="" class="button"
-            >Подписаться
-            <svg class="button-icon">
-              <use href="./images/sprite.svg#icon-button-icon"></use>
-            </svg>
-          </a>
+          <form class="js-speaker-form">
+            <!-- <b class="call">Подпишитесь на рассылку</b> -->
+            <label for="email" class="call">Подпишитесь на рассылку </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              id="email"
+              class="email-form-footer"
+            />
+            <button type="submit" class="button">
+              Подписаться
+              <svg class="button-icon">
+                <use href="./images/sprite.svg#icon-button-icon"></use>
+              </svg>
+            </button>
+
+            <!-- <a href="" class="button"
+              >Подписаться
+              <svg class="button-icon">
+                <use href="./images/sprite.svg#icon-button-icon"></use>
+              </svg>
+            </a> -->
+          </form>
         </div>
       </div>
 
       <p class="container copyright">2020 | Developed by GoIT Students</p>
     </footer>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <div class="modal-button">
+          <button class="button" data-close-modal>Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>

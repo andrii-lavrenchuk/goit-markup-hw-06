@@ -348,14 +348,30 @@
           </ul>
         </div>
         <div class="subscribe">
-          <b class="call">Подпишитесь на рассылку</b>
-          <!-- <button type="button" class="footer-button">Подписаться</button> -->
-          <a href="" class="button"
-            >Подписаться
-            <svg class="button-icon">
-              <use href="./images/sprite.svg#icon-button-icon"></use>
-            </svg>
-          </a>
+          <form class="js-speaker-form">
+            <!-- <b class="call">Подпишитесь на рассылку</b> -->
+            <label for="email" class="call">Подпишитесь на рассылку </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              id="email"
+              class="email-form-footer"
+            />
+            <button type="submit" class="button">
+              Подписаться
+              <svg class="button-icon">
+                <use href="./images/sprite.svg#icon-button-icon"></use>
+              </svg>
+            </button>
+
+            <!-- <a href="" class="button"
+              >Подписаться
+              <svg class="button-icon">
+                <use href="./images/sprite.svg#icon-button-icon"></use>
+              </svg>
+            </a> -->
+          </form>
         </div>
       </div>
 
