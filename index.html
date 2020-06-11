@@ -66,7 +66,7 @@
       <!--"эффективные решения" section-->
       <section class="hero">
         <h1 class="hero-title">эффективные решения<br />для вашего бизнеса</h1>
-        <button class="button" data-open-modal>Заказать услугу</button>
+        <button class="button" data-modal-open>Заказать услугу</button>
         <!-- <a href="" class="button" data-open-modal>Заказать услугу</a> -->
       </section>
       <!--Features section-->
@@ -555,7 +555,7 @@
       <p class="container copyright">2020 | Developed by GoIT Students</p>
     </footer>
     <!-- Modal -->
-    <div class="backdrop is-hidden" data-backdrop>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="form js-speaker-form">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
@@ -613,7 +613,7 @@
           </div>
 
           <div class="modal-button">
-            <button class="close-button" data-close-modal>
+            <button class="close-button" data-modal-close>
               <svg class="close-icon">
                 <use href="./images/sprite.svg#icon-close-button"></use>
               </svg>
@@ -639,25 +639,6 @@
           });
       })();
     </script>
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
