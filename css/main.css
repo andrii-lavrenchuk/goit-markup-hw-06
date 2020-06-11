@@ -514,8 +514,10 @@
   color: var(--secondary-text-color);
 
   margin: 0;
+  padding-left: 42px;
   width: 100%;
   height: 40px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -540,26 +542,20 @@
   width: 100%;
   height: 120px;
   resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 /* Form icons */
 
 .icon {
   position: absolute;
-  top: 14px;
+  top: 50%;
   left: 19px;
 
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-}
+  transform: translateY(-50%);
 
-.form-icon-phone {
-  width: 13px;
-  height: 13px;
-}
-
-.form-icon-mail {
-  width: 15px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
 }
