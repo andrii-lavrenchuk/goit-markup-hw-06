@@ -560,43 +560,96 @@
         <form class="form js-speaker-form">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-          <div class="form-field">
-            <input class="form-input" type="text" name="name" id="name" />
-            <label for="name" class="form-lable">Имя</label>
+          <!-- <div class="form-field">
+            <input
+              id="name"
+              class="form-input"
+              type="text"
+              name="name"
+              placeholder=" "
+            />
+            <label for="name" class="form-lable form-field">Имя </label>
             <svg class="icon">
               <use href="./images/sprite.svg#icon-name-form"></use>
             </svg>
-          </div>
+          </div> -->
 
-          <div class="form-field">
+          <label class="form-field">
+            <input class="form-input" type="text" name="name" placeholder=" " />
+            <span class="form-lable">Имя</span>
+            <svg class="icon">
+              <use href="./images/sprite.svg#icon-name-form"></use>
+            </svg>
+          </label>
+
+          <!-- <div class="form-field">
+            <input
+              class="form-input"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder=" "
+            />
             <label for="tel" class="form-lable">Телефон</label>
-            <input class="form-input" type="tel" name="tel" id="tel" />
             <svg class="icon">
               <use href="./images/sprite.svg#icon-phone-form"></use>
             </svg>
-          </div>
+          </div> -->
+          <label class="form-field">
+            <input class="form-input" type="text" name="name" placeholder=" " />
+            <span class="form-lable">Телефон</span>
+            <svg class="icon">
+              <use href="./images/sprite.svg#icon-phone-form"></use>
+            </svg>
+          </label>
 
-          <div class="form-field">
-            <label for="email" class="form-lable">Почта</label>
-
+          <!-- <div class="form-field">
             <input
               class="form-input"
               type="email"
               name="email"
               id="email-form"
+              placeholder=" "
             />
+            <label for="email" class="form-lable">Почта</label>
             <svg class="icon form-icon-mail">
               <use href="./images/sprite.svg#icon-mail-form"></use>
             </svg>
-          </div>
-          <div class="form-field">
-            <label for="comment" class="form-lable">Комментарий</label>
-            <textarea class="comment" name="comment" id="comment" rows="10">
-            </textarea>
-          </div>
+          </div> -->
+
+          <label class="form-field">
+            <input class="form-input" type="text" name="name" placeholder=" " />
+            <span class="form-lable">Почта</span>
+            <svg class="icon">
+              <use href="./images/sprite.svg#icon-mail-form"></use>
+            </svg>
+          </label>
+          <!-- <div class="form-field">
+            <textarea
+              class="comment form-input"
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder=" "
+            ></textarea>
+            <label for="comment" class="comment-lable form-lable"
+              >Комментарий</label
+            >
+          </div> -->
+
+          <label class="form-field">
+            <textarea
+              class="comment form-input"
+              name="comment"
+              rows="10"
+              placeholder=" "
+            ></textarea>
+            <span class="comment-lable form-lable">Комментарий</span>
+          </label>
 
           <div class="policy">
             <input
+              class="checkbox"
               type="checkbox"
               name="checkbox"
               value="policy"
