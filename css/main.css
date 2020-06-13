@@ -60,7 +60,6 @@
 }
 /* section */
 .features .section-title {
-  display: none;
   margin-bottom: 0;
   margin-top: 0;
   color: var(--primary-text-color);
@@ -601,17 +600,6 @@
 
 .conditions {
   color: var(--accent-color);
-}
-
-.checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .checkbox-icon {

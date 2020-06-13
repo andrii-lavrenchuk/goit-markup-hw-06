@@ -26,7 +26,8 @@
 }
 
 .portfolio .portfolio-title {
-  display: none;
+  margin: 0;
+  padding: 0;
 }
 .portfolio-nav {
   display: flex;
