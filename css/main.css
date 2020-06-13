@@ -554,18 +554,6 @@
   margin-top: 30px;
 }
 
-.policy {
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--secondary-text-color);
-
-  margin-top: 20px;
-}
-
-.conditions {
-  color: var(--accent-color);
-}
-
 .comment {
   width: 100%;
   height: 120px;
@@ -597,3 +585,44 @@
 /* .form-input:focus ~ .icon {
   fill: var(--accent-color);
 } */
+
+/* Policy */
+.policy {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+
+  margin-top: 20px;
+}
+
+.conditions {
+  color: var(--accent-color);
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 9px;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: green;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: red;
+}
